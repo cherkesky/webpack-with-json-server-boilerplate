@@ -1,5 +1,11 @@
-const message = "Your Webpack application is set up and ready to go. Please start writing code."
+import formManager from "./formManager.js"
+import eventManager from "./eventsHandler.js"
 
-document.querySelector("#container").innerHTML = `<h1>${message}</h1>`
+const containerRef = document.getElementById("form-container")
 
-console.log(message)
+
+//rendereing the main contact form on the screen
+containerRef.innerHTML = formManager.renderMainForm()
+
+eventManager.showEntriesClick();
+eventManager.addNewEntryClick();

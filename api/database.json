@@ -1,24 +1,33 @@
 {
-  "posts": [
+  "contacts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "first_name": "Guy",
+      "last_name": "Cherkesky",
+      "address": "301 Plus Park Blvd Ste. 300, Nashville, TN 37217",
+      "phone": "(615) 838-8181",
+      "id": 1
     },
     {
-      "id": 2,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "first_name": "Joe",
+      "last_name": "Smith",
+      "address": "301 Plus Park Blvd Ste. 301, Nashville, TN 37217",
+      "phone": "(615) 838-8182",
+      "id": 2
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "first_name": "Donna",
+      "last_name": "White",
+      "address": "301 Plus Park Blvd Ste. 302, Nashville, TN 37217",
+      "phone": "(615) 838-8183",
+      "id": 3
+    },
+    {
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "address": "301 Plus Park Blvd Ste. 303, Nashville, TN 37217",
+      "phone": "(615) 838-8184",
+      "id": 4
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+
+  ]
 }
