@@ -1,20 +1,38 @@
-//A ContactForm component that listens for when the submit button is pressed. When it is triggered, a new contact should be POSTed to the API. It should import the ContactCollection component.
 import API from "./apiManager.js"
+import DOMrenderer from "./DomRenderer.js"
 
 
 const eventManager = {
+//***********************************************************************************************
+//  SHOW entries button been clicked
+//***********************************************************************************************
   showEntriesClick() {
-document.getElementById("show-contact").addEventListener("click", function () {
-  console.log("SHOW CONTACTS")
-  API.getAllContacts()
-})},
+    document.getElementById("show-contact").addEventListener("click", function () {
+      console.log("SHOW CONTACTS CLICK")
+      API.getAllContacts()
+        .then(jsonfiedInfo => DOMrenderer.displayContacts(jsonfiedInfo))
+    })
+  },
 
 
+//***********************************************************************************************
+//   ADD new entry button been clicked
+//***********************************************************************************************
+  addNewEntryClick() {
+    document.getElementById("add-contact").addEventListener("click", function () {
+      console.log("ADD CONTACT CLICK")
 
-addNewEntryClick() {
-  document.getElementById("add-contact").addEventListener("click", function () {
-    console.log("ADD CONTACT")
-})}
+      let first_name = document.getElementById("first-input").value
+      let last_name= document.getElementById("last-input").value
+      let address= document.getElementById("address-input").value
+      let phone= document.getElementById("phone-input").value
+
+      console.log (first_name, last_name, address, phone)
+
+      API.addContact({first_name, last_name, address, phone})
+      .then (eventManager.showEntriesClick)
+    })
+  }
 }
 
 export default eventManager

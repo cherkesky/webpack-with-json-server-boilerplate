@@ -1,4 +1,4 @@
-
+import DOMrenderer from "./DomRenderer.js"
 
 const formManager = {
   //***********************************************************************************************
@@ -27,15 +27,15 @@ const formManager = {
         <br>
         <fieldset>
             <label for="phone-input">Phone Number</label>
-            <input type="text" name="phone-input" id="concept-input" class="form-control" required>
+            <input type="text" name="phone-input" id="phone-input" class="form-control" required>
         </fieldset>
         <br>
     </form>
 
-    <form class="form-group flex-nowrap card">
+    <article class="form-group flex-nowrap card">
     <button id="show-contact" class="btn btn-primary btn-lg">Show Contacts</button>
    <button id="add-contact" class="btn btn-secondary btn-lg">Add New Contact</button>
-   </form>  
+   </article>  
     <br><br>
     <hr>
     `

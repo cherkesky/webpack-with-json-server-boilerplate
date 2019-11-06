@@ -1,12 +1,26 @@
 const API = {
-
+//***********************************************************************************************
+//  GET all the contacts
+//***********************************************************************************************
 getAllContacts(){
   console.log("GETALLCONTACT CALLED")
 
   return fetch("http://localhost:8088/contacts")
     .then(response => response.json())
-    .then(jsonfiedinfo => console.log(jsonfiedinfo))
+},
+//***********************************************************************************************
+//   ADDING a new contact
+//***********************************************************************************************
+addContact(newContactObj) {
+  return fetch("http://localhost:8088/contacts", { 
+  method: "POST",
+  headers: {
+      "Content-Type": "application/json"
+  },
+  body: JSON.stringify(newContactObj)
+      })
 }
+
 }
 
 export default API
