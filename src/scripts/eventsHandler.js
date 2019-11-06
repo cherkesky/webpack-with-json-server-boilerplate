@@ -30,7 +30,8 @@ const eventManager = {
       console.log (first_name, last_name, address, phone)
 
       API.addContact({first_name, last_name, address, phone})
-      .then (eventManager.showEntriesClick)
+      .then (API.getAllContacts)
+      .then(jsonfiedInfo => DOMrenderer.displayContacts(jsonfiedInfo))
     })
   }
 }
