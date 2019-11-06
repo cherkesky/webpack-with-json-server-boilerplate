@@ -3,17 +3,17 @@
 //***********************************************************************************************
 
 
-import formManager from "./formManager.js"
-import eventManager from "./eventsHandler.js"
+import ContactForm from "./formManager.js"
+import ContactCollection from "./eventsHandler.js"
 
 //reference to the main container that holds the main form
 const containerRef = document.getElementById("form-container")
 
 
 //rendereing the main contact form on the screen
-containerRef.innerHTML = formManager.renderMainForm()
+containerRef.innerHTML = ContactForm.renderMainForm()
 
 
 //looking for clicks
-eventManager.showEntriesClick();
-eventManager.addNewEntryClick();
+ContactCollection.showEntriesClick();
+ContactCollection.addNewEntryClick();

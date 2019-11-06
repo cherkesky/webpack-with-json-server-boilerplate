@@ -1,4 +1,4 @@
-const DOMrenderer = {
+const Contact = {
 //****************************************************************************************************
 //  Iterate through the josn response and build the contact list 
 //****************************************************************************************************
@@ -8,7 +8,7 @@ const DOMrenderer = {
       console.log(jsonfiedResponse)
       let HtmlForAllEntries = ""
       jsonfiedResponse.forEach(entry => {
-        const entryHtml = DOMrenderer.createHTML(entry)
+        const entryHtml = Contact.createHTML(entry)
         HtmlForAllEntries += entryHtml
       })
       const contactRef = document.getElementById("contacts-container")
@@ -35,4 +35,4 @@ createHTML(entries) {
 }
 
 
-export default DOMrenderer
+export default Contact

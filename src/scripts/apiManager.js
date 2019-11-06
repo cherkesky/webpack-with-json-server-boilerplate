@@ -1,4 +1,4 @@
-const API = {
+const ContactList = {
 //***********************************************************************************************
 //  GET all the contacts
 //***********************************************************************************************
@@ -23,4 +23,5 @@ addContact(newContactObj) {
 
 }
 
-export default API
+
+export default ContactList

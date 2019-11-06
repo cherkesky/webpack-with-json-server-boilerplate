@@ -1,16 +1,15 @@
-import API from "./apiManager.js"
-import DOMrenderer from "./DomRenderer.js"
+import ContactList from "./apiManager.js"
+import Contact from "./DomRenderer.js"
 
-
-const eventManager = {
+const ContactCollection = {
 //***********************************************************************************************
 //  SHOW entries button been clicked
 //***********************************************************************************************
   showEntriesClick() {
     document.getElementById("show-contact").addEventListener("click", function () {
       console.log("SHOW CONTACTS CLICK")
-      API.getAllContacts()
-        .then(jsonfiedInfo => DOMrenderer.displayContacts(jsonfiedInfo))
+      ContactList.getAllContacts()
+        .then(jsonfiedInfo => Contact.displayContacts(jsonfiedInfo))
     })
   },
 
@@ -29,11 +28,11 @@ const eventManager = {
 
       console.log (first_name, last_name, address, phone)
 
-      API.addContact({first_name, last_name, address, phone})
-      .then (API.getAllContacts)
-      .then(jsonfiedInfo => DOMrenderer.displayContacts(jsonfiedInfo))
+      ContactList.addContact({first_name, last_name, address, phone})
+      .then (ContactList.getAllContacts)
+      .then(jsonfiedInfo => Contact.displayContacts(jsonfiedInfo))
     })
   }
 }
 
-export default eventManager
+export default ContactCollection

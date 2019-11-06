@@ -1,6 +1,5 @@
-import DOMrenderer from "./DomRenderer.js"
 
-const formManager = {
+const ContactForm = {
   //***********************************************************************************************
   //  Creating the MAIN form
   //***********************************************************************************************
@@ -42,4 +41,4 @@ const formManager = {
   }
 }
 
-export default formManager
+export default ContactForm
